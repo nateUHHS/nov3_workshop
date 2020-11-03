@@ -1,25 +1,30 @@
-while (true) {
-    /**    
+input.onGesture(Gesture.Shake, function on_gesture_shake() {
+    light.showAnimation(light.rainbowAnimation, 500)
+    pause(500)
+    light.clear()
+})
+/** 
+while True:
+
+
     print(input.light_level())
-    if input.light_level() > 55:
+    if input.light_level() > 75:
         light.set_all(light.rgb(255,128,0))
     else:
         light.set_all(light.rgb(0,0,255))
 
     print(input.sound_level())
-    if input.sound_level() > 125:
+    if input.sound_level() > 140:
+        light.set_all(light.rgb(255, 128, 0))
+    else:
+        light.set_all(light.rgb(0, 0, 255))
+
+    print(input.temperature(TemperatureUnit.FAHRENHEIT))
+    if input.temperature(TemperatureUnit.FAHRENHEIT) >= 81:
         light.set_all(light.rgb(255,128,0))
+    elif input.temperature(TemperatureUnit.FAHRENHEIT) > 50:
+        light.set_all(light.rgb(0,255,0))
     else:
         light.set_all(light.rgb(0,0,255))
-    
+
  */
-    console.log(input.temperature(TemperatureUnit.Fahrenheit))
-    if (input.temperature(TemperatureUnit.Fahrenheit) >= 81) {
-        light.setAll(light.rgb(255, 128, 0))
-    } else if (input.temperature(TemperatureUnit.Fahrenheit) > 50) {
-        light.setAll(light.rgb(0, 255, 0))
-    } else {
-        light.setAll(light.rgb(0, 0, 255))
-    }
-    
-}
